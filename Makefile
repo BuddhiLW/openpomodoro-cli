@@ -1,4 +1,5 @@
 BINARY := pomodoro
+BINARY_MCP := pomodoro-mcp
 
 GO_SOURCES := $(shell find . -name '*.go' -not -path './vendor/*')
 VERSION := $(shell git describe --tags --exact-match 2>/dev/null || git rev-parse --short HEAD 2>/dev/null || echo "dev")
@@ -27,13 +28,20 @@ test-acceptance: bats $(BINARY)
 $(BINARY): $(GO_SOURCES) go.mod go.sum
 	go build -ldflags "$(LDFLAGS)" -o $(BINARY) .
 
+$(BINARY_MCP): $(GO_SOURCES) go.mod go.sum
+	go build -ldflags "$(LDFLAGS)" -o $(BINARY_MCP) ./cmd/pomodoro-mcp
+
+.PHONY: all
+all: $(BINARY) $(BINARY_MCP)
+
 .PHONY: install
 install:
 	go install ./cmd/pomodoro
+	go install ./cmd/pomodoro-mcp
 
 .PHONY: clean
 clean:
-	rm -rf $(BINARY)
+	rm -rf $(BINARY) $(BINARY_MCP)
 
 .PHONY: bats
 bats: $(BATS_CORE) $(BATS_SUPPORT) $(BATS_ASSERT)

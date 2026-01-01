@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/open-pomodoro/openpomodoro-cli/format"
-	"github.com/open-pomodoro/openpomodoro-cli/hook"
+	"github.com/BuddhiLW/openpomodoro-cli/format"
+	"github.com/BuddhiLW/openpomodoro-cli/hook"
 	"github.com/spf13/cobra"
 )
 

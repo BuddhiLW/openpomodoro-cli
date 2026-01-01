@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/open-pomodoro/go-openpomodoro"
-	"github.com/open-pomodoro/openpomodoro-cli/format"
+	"github.com/BuddhiLW/openpomodoro-cli/format"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
