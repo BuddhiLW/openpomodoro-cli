@@ -1,4 +1,4 @@
 dist/
 pomodoro
-pomodoro-mcp
+/pomodoro-mcp
 test/.bats/
