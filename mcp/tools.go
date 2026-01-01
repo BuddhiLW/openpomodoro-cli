@@ -8,7 +8,7 @@ import (
 
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/open-pomodoro/go-openpomodoro"
-	"github.com/BuddhiLW/openpomodoro-cli/hook"
+	"github.com/open-pomodoro/openpomodoro-cli/hook"
 )
 
 // StatusResponse represents the current Pomodoro status

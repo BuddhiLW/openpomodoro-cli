@@ -66,3 +66,18 @@ All data is stored in `~/.pomodoro/` (or path specified via `--directory` flag):
 - Unit tests: Standard Go tests in `*_test.go` files
 - Acceptance tests: Bats (Bash Automated Testing System) in `test/*.bats`
 - Test helper (`test/test_helper.bash`) provides `pomodoro()` wrapper that uses isolated temp directories
+
+## Progress Log
+
+### 2026-01-01: MCP Server Extension
+
+- Created MCP server extension for Claude Code integration
+- Added `mcp/` package with `server.go` and `tools.go`
+- Implemented 10 MCP tools: start_pomodoro, get_status, finish_pomodoro, cancel_pomodoro, clear_pomodoro, start_break, repeat_pomodoro, amend_pomodoro, get_history, get_settings
+- Added `cmd/pomodoro-mcp/main.go` entry point for stdio transport
+- Changed module path from `github.com/open-pomodoro/openpomodoro-cli` to `github.com/BuddhiLW/openpomodoro-cli`
+- Updated all cmd/*.go imports to use new module path
+- Updated Makefile with MCP binary targets
+- Fixed `.gitignore` to use `/pomodoro-mcp` (only ignore binary at root)
+- Released v0.4.1 with MCP support
+- Install: `go install github.com/BuddhiLW/openpomodoro-cli/cmd/pomodoro-mcp@v0.4.1`

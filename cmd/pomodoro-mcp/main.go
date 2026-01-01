@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	pomodoromcp "github.com/BuddhiLW/openpomodoro-cli/mcp"
+	pomodoromcp "github.com/open-pomodoro/openpomodoro-cli/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )
 

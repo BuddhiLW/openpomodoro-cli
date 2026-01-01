@@ -31,7 +31,7 @@
 Or, if you have a [Go development environment](https://golang.org/doc/install):
 
 ```
-go install github.com/BuddhiLW/openpomodoro-cli/cmd/pomodoro@latest
+go install github.com/open-pomodoro/openpomodoro-cli/cmd/pomodoro@latest
 ```
 
 Or, if you've cloned this repository:
@@ -339,7 +339,7 @@ An MCP (Model Context Protocol) server is available for integration with Claude 
 ### Installation
 
 ```bash
-go install github.com/BuddhiLW/openpomodoro-cli/cmd/pomodoro-mcp@latest
+go install github.com/open-pomodoro/openpomodoro-cli/cmd/pomodoro-mcp@latest
 ```
 
 ### Configure with Claude Code

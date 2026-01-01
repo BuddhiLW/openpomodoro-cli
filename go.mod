@@ -1,4 +1,4 @@
-module github.com/BuddhiLW/openpomodoro-cli
+module github.com/open-pomodoro/openpomodoro-cli
 
 go 1.23.0
 
