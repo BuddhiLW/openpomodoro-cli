@@ -20,6 +20,7 @@
   * [Available Parts](#available-parts)
 * [Hooks](#hooks)
 * [Settings](#settings)
+* [MCP Server](#mcp-server)
 
 ## Installation
 
@@ -330,3 +331,36 @@ Settings are automatically applied when:
 * Displaying daily progress in status format (`%c/%g`)
 
 The daily goal setting is used by the status format parts `%g` (goal) and `%c` (completed today) to show progress toward your daily target.
+
+## MCP Server
+
+An MCP (Model Context Protocol) server is available for integration with Claude Code and other MCP-compatible clients.
+
+### Installation
+
+```bash
+go install github.com/open-pomodoro/openpomodoro-cli/cmd/pomodoro-mcp@latest
+```
+
+### Configure with Claude Code
+
+```bash
+claude mcp add pomodoro -- pomodoro-mcp
+```
+
+### Available Tools
+
+| Tool | Description |
+|------|-------------|
+| `start_pomodoro` | Start a new Pomodoro (description, duration, tags) |
+| `get_status` | Get current Pomodoro status |
+| `finish_pomodoro` | Finish the current Pomodoro early |
+| `cancel_pomodoro` | Cancel the active Pomodoro |
+| `clear_pomodoro` | Clear a finished Pomodoro |
+| `start_break` | Start a break timer |
+| `repeat_pomodoro` | Repeat the last Pomodoro |
+| `amend_pomodoro` | Amend current Pomodoro |
+| `get_history` | Get Pomodoro history |
+| `get_settings` | Get current settings |
+
+All tools trigger hooks (start/stop/break) just like the CLI commands.
